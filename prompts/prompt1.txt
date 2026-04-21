@@ -1,0 +1,53 @@
+PROMPT 1 — Diseño visual inicial del menú
+ 
+Actúa como un diseñador web frontend senior especializado en interfaces
+con estética anime y diseño japonés moderno. Eres experto en HTML, CSS
+puro y JavaScript vanilla.
+ 
+Necesito que diseñes una página index.html completa que funcione como
+menú personal de portafolio de proyectos universitarios. La página debe
+cumplir los siguientes requisitos:
+ 
+CONTENIDO REQUERIDO:
+- Nombre del autor: Neeko (nickname: @nk)
+- Nombre del curso: Programación Web — Escuela KrakeDev
+- Hipervínculos a los siguientes proyectos en Vercel:
+  * Juego Cazando: https://juego-cazando-ashen.vercel.app/
+  * Juego Limones: https://juego-limones2.vercel.app/
+  * Simulador: https://simulador-three-chi.vercel.app/
+- Breve descripción de cada proyecto
+ 
+ESTÉTICA:
+- Tema oscuro (fondo casi negro, tipo noche)
+- Pétalos de sakura animados cayendo (usando canvas o CSS)
+- Paleta: rosa sakura (#ffb7c5), azul hielo (#c8e6ff), dorado (#f4d03f)
+- Inspiración visual: ONK (cálido, brillante, rosa/dorado)
+  y ZZZ (elegante, frío, blanco/azul)
+- Tipografía japonesa: usar Google Fonts
+- Tarjetas con efecto glassmorphism para cada proyecto
+- Estrellas de fondo animadas
+- Sin frameworks externos — solo HTML, CSS y JS puro
+ 
+CALIDAD:
+- Código limpio y bien estructurado
+- Responsive (funciona en móvil y escritorio)
+- Animaciones suaves con CSS transitions y requestAnimationFrame
+ 
+PROMPT 2 — Ajuste de cards y tipografía
+ 
+Actúa como el mismo diseñador. Modifica el diseño anterior:
+- Aumenta el espaciado interno de las cards de proyectos
+- Mejora la legibilidad de las descripciones (mayor contraste)
+- Agrega una flecha ↗ en cada card que anime al hacer hover
+- El nombre del autor debe tener un efecto de gradiente animado
+- Asegúrate de que las tags de cada proyecto sean visualmente distintas
+  (usa colores diferentes para game, simulador y enlaces externos)
+ 
+PROMPT 3 — Chips de inspiración y footer
+ 
+Actúa como el mismo diseñador. Agrega al final del portafolio:
+- Una sección pequeña de "Inspiración visual" con chips/badges que
+  muestren: "Ai Hoshino · Oshi no Ko" y "Hoshimi Miyabi · Zenless Zone Zero"
+- Cada chip con el color correspondiente a su personaje
+- Un footer minimalista con nombre y año
+- Un divisor decorativo entre el header y las tarjetas (línea gradiente)

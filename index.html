@@ -1,26 +1,314 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-        <a href="https://simulador-three-chi.vercel.app/">Simulador</a>
-        <a href="https://juego-cazando-ashen.vercel.app/">Juego Cazando</a>
-        <a href="https://juego-limones2.vercel.app/">Juego Limones</a>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neeko | Portafolio</title>
 
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ░░░ FONDO: estrellas y canvas ░░░ -->
+  <div class="star-field" id="starField"></div>
+  <canvas id="sakura-canvas"></canvas>
+
+  <!-- ░░░ CONTENIDO PRINCIPAL ░░░ -->
+  <div class="page-wrapper">
+    <div class="container" style="max-width: 920px;">
+
+      <!-- ══════════════════════════════
+           SECCIÓN HERO / PERFIL
+           ══════════════════════════════ -->
+      <section class="hero-section">
+        <!-- Imagen de perfil con anillo girador -->
         <div class="avatar-ring">
-            <img
-                src="ruby.jpg"
-                alt="Avatar de Neeko"
-                class="avatar-inner"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            />
-
-            <div class="avatar-inner d-none d-flex align-items-center justify-content-center"
-                style="font-size:2rem; background:var(--void-light);">
-                ねこ
-            </div>
+          <img
+            src="ruby.jpg"
+            alt="Avatar de Neeko"
+            class="avatar-inner"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <!-- Fallback texto si la imagen no carga -->
+          <div class="avatar-inner d-none d-flex align-items-center justify-content-center"
+               style="font-size:2rem; font-family:'Noto Serif JP',serif; background:var(--void-light);">
+            ねこ
+          </div>
         </div>
-    </body>
+
+        <!-- Nombre y nickname -->
+        <h1 class="author-name">Neeko</h1>
+        <p class="author-nickname mb-3">@nk · Systems &amp; Dev</p>
+
+        <!-- Divisor estrellado -->
+        <div class="ai-divider">
+          <span class="star-icon">✦</span>
+        </div>
+
+        <!-- Info del curso -->
+        <span class="course-badge">Escuela de Programación · KrakeDev</span>
+        <p class="course-subtitle mt-1">Portafolio de proyectos — Programación Web</p>
+      </section>
+
+      <!-- ══════════════════════════════
+           SECCIÓN PROYECTOS
+           ══════════════════════════════ -->
+      <section class="mb-5">
+        <p class="section-label">
+          <span class="star-icon">✦</span> Proyectos
+        </p>
+
+        <!-- Bootstrap row + col para el grid de cards -->
+        <div class="row g-3">
+
+          <!-- ── CARD 1: Juego Cazando ── -->
+          <div class="col-12 col-sm-6">
+            <a href="https://juego-cazando-ashen.vercel.app/"
+               class="project-card card border-0"
+               target="_blank">
+
+              <!-- Barra de selección (animada en hover) -->
+              <div class="select-bar"></div>
+
+              <!-- Área de previsualización -->
+              <div class="preview-wrap preview-game-1">
+                <iframe
+                  src="https://juego-cazando-ashen.vercel.app/"
+                  class="preview-iframe"
+                  loading="lazy"
+                  title="Preview Juego Cazando">
+                </iframe>
+                <!-- Fallback visual si iframe está bloqueado -->
+                <div class="preview-fallback">
+                  <span class="game-icon" style="color:var(--ai-pink);">🎯</span>
+                  <span class="game-label">Juego Cazando</span>
+                </div>
+                <!-- Overlay hover con botón play -->
+                <div class="preview-overlay">
+                  <div class="play-btn">▶</div>
+                </div>
+              </div>
+
+              <!-- Cuerpo de la card -->
+              <div class="card-body">
+                <span class="card-tag tag-game">Juego · Canvas</span>
+                <p class="card-title-text">Juego Cazando</p>
+                <p class="card-description">
+                  Juego de caza con JavaScript y Canvas API. Mecánicas de disparo y puntuación en tiempo real.
+                </p>
+                <span class="card-arrow">↗</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- ── CARD 2: Juego Limones ── -->
+          <div class="col-12 col-sm-6">
+            <a href="https://juego-limones2.vercel.app/"
+               class="project-card card border-0"
+               target="_blank">
+
+              <div class="select-bar"></div>
+
+              <div class="preview-wrap preview-game-2">
+                <iframe
+                  src="https://juego-limones2.vercel.app/"
+                  class="preview-iframe"
+                  loading="lazy"
+                  title="Preview Juego Limones">
+                </iframe>
+                <div class="preview-fallback">
+                  <span class="game-icon" style="color:#a8e063;">🍋</span>
+                  <span class="game-label">Juego Limones</span>
+                </div>
+                <div class="preview-overlay">
+                  <div class="play-btn">▶</div>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <span class="card-tag tag-game">Juego · Canvas</span>
+                <p class="card-title-text">Juego Limones</p>
+                <p class="card-description">
+                  Recolección de limones con física, cronómetro y sistema de vidas en Canvas puro.
+                </p>
+                <span class="card-arrow">↗</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- ── CARD 3: Simulador ── -->
+          <div class="col-12 col-sm-6">
+            <a href="https://simulador-three-chi.vercel.app/"
+               class="project-card card border-0"
+               target="_blank">
+
+              <div class="select-bar"></div>
+
+              <div class="preview-wrap preview-sim">
+                <iframe
+                  src="https://simulador-three-chi.vercel.app/"
+                  class="preview-iframe"
+                  loading="lazy"
+                  title="Preview Simulador">
+                </iframe>
+                <div class="preview-fallback">
+                  <span class="game-icon" style="color:var(--ai-gold);">📊</span>
+                  <span class="game-label">Simulador</span>
+                </div>
+                <div class="preview-overlay">
+                  <div class="play-btn">▶</div>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <span class="card-tag tag-sim">Simulador · JS</span>
+                <p class="card-title-text">Simulador</p>
+                <p class="card-description">
+                  Simulador interactivo con JavaScript. Visualización dinámica de datos y estados en tiempo real.
+                </p>
+                <span class="card-arrow">↗</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- ── CARD 4: Google ── -->
+          <div class="col-12 col-sm-6">
+            <a href="https://www.google.com"
+               class="project-card card border-0"
+               target="_blank">
+
+              <div class="select-bar"></div>
+
+              <div class="preview-wrap preview-ext">
+                <div class="preview-fallback">
+                  <span class="game-icon" style="color:var(--ai-rose);">🔍</span>
+                  <span class="game-label">Google</span>
+                </div>
+                <div class="preview-overlay">
+                  <div class="play-btn">↗</div>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <span class="card-tag tag-ext">Enlace externo</span>
+                <p class="card-title-text">Google</p>
+                <p class="card-description">
+                  Motor de búsqueda y referencia externa para recursos de desarrollo web.
+                </p>
+                <span class="card-arrow">↗</span>
+              </div>
+            </a>
+          </div>
+
+        </div><!-- /row -->
+      </section>
+
+      <!-- ══════════════════════════════
+           FOOTER
+           ══════════════════════════════ -->
+      <footer class="site-footer">
+        <p>Neeko &mdash; Portafolio 2025 &nbsp;·&nbsp; HTML · CSS · Bootstrap · JS</p>
+      </footer>
+
+    </div><!-- /container -->
+  </div><!-- /page-wrapper -->
+
+  <!-- Bootstrap 5 JS (bundle con Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ══════════════════════════════════════
+       SCRIPT: Sakura canvas + estrellas
+       ══════════════════════════════════════ -->
+  <script>
+    /* ─── CANVAS PÉTALOS ──────────────────────── */
+    const canvas = document.getElementById('sakura-canvas');
+    const ctx    = canvas.getContext('2d');
+    let petals   = [];
+    const COUNT  = 40;
+
+    function resizeCanvas() {
+      canvas.width  = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function newPetal(randomY = false) {
+      return {
+        x:        Math.random() * canvas.width,
+        y:        randomY ? Math.random() * canvas.height : -30,
+        size:     2.5 + Math.random() * 5,
+        speedY:   0.5 + Math.random() * 1.1,
+        speedX:   (Math.random() - 0.5) * 0.5,
+        rotation: Math.random() * Math.PI * 2,
+        rotSpeed: (Math.random() - 0.5) * 0.04,
+        alpha:    0.35 + Math.random() * 0.55,
+        color:    Math.random() > 0.4 ? '#ffb7c5' : '#ffd166'
+      };
+    }
+
+    for (let i = 0; i < COUNT; i++) petals.push(newPetal(true));
+
+    function animatePetals() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      petals.forEach(p => {
+        p.y += p.speedY;
+        p.x += p.speedX + Math.sin(p.y * 0.015) * 0.4;
+        p.rotation += p.rotSpeed;
+        if (p.y > canvas.height + 20) Object.assign(p, newPetal());
+        drawPetal(p);
+      });
+      requestAnimationFrame(animatePetals);
+    }
+
+    function drawPetal(p) {
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rotation);
+      ctx.globalAlpha = p.alpha;
+      ctx.fillStyle   = p.color;
+      ctx.beginPath();
+      ctx.ellipse(0, 0, p.size, p.size * 0.5, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+
+    animatePetals();
+
+    /* ─── ESTRELLAS DINÁMICAS ──────────────────── */
+    const field = document.getElementById('starField');
+    for (let i = 0; i < 90; i++) {
+      const d   = document.createElement('div');
+      const sz  = 0.5 + Math.random() * 1.8;
+      const col = Math.random() > 0.5 ? '#ffb7c5' : '#ffd166';
+      d.className = 'star-dot';
+      Object.assign(d.style, {
+        left:              Math.random() * 100 + '%',
+        top:               Math.random() * 100 + '%',
+        width:             sz + 'px',
+        height:            sz + 'px',
+        background:        col,
+        animationDuration: (2 + Math.random() * 4) + 's',
+        animationDelay:    (Math.random() * 5) + 's'
+      });
+      field.appendChild(d);
+    }
+
+    /* ─── FALLBACK IFRAME ─────────────────────────
+       Si el iframe carga → ocultar fallback visual
+       Si el iframe falla → mostrarlo en su lugar    */
+    document.querySelectorAll('.preview-iframe').forEach(iframe => {
+      iframe.addEventListener('load', () => {
+        const fb = iframe.parentElement.querySelector('.preview-fallback');
+        if (fb) fb.style.display = 'none';
+      });
+      iframe.addEventListener('error', () => {
+        iframe.style.display = 'none';
+      });
+    });
+  </script>
+
+</body>
 </html>
