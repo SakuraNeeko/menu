@@ -1,0 +1,24 @@
+:root {
+  --void:         #07030f;
+  --void-mid:     #110820;
+  --void-light:   #1c1030;
+  --ai-pink:      #ff6b9d;
+  --ai-rose:      #ffb3d1;
+  --ai-deep:      #c41e5a;
+  --ai-gold:      #ffd166;
+  --sakura-petal: #ffb7c5;
+  --text-main:    #f0dff0;
+  --text-muted:   #a07898;
+  --glass-bg:     rgba(255, 107, 157, 0.05);
+  --glass-border: rgba(255, 107, 157, 0.2);
+}
+
+.avatar-ring {
+  display: inline-block;
+  padding: 3px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--ai-pink), var(--ai-gold), var(--ai-rose), var(--ai-deep), var(--ai-pink)
+  );
+  animation: ring-spin 6s linear infinite;
+}
